@@ -1012,7 +1012,7 @@ local on_vimenter = function()
   vim.cmd('e ~/wiki/main.md')
 end
 
-vim.api.nvim_create_autocmd( "VimEnter" , { group = augroup, nested = true, once = true, callback = on_vimenter, desc = 'Open on VimEnter' })
+-- vim.api.nvim_create_autocmd( "VimEnter" , { group = augroup, nested = true, once = true, callback = on_vimenter, desc = 'Open on VimEnter' })
 vim.api.nvim_create_autocmd("BufEnter"  , { pattern = "term://*", callback = function() vim.cmd('startinsert'); vim.opt_local.number = false; end })
 vim.api.nvim_create_autocmd("TermEnter" , { callback = function() vim.opt_local.number = false; end })
 vim.api.nvim_create_autocmd("BufEnter"  , { callback = function() vim.opt_local.formatoptions = "jnql"; end })
@@ -1056,7 +1056,7 @@ vim.keymap.set({"n",         }, "<M-b>"      , ":vnew<cr>:terminal<cr>"         
 vim.keymap.set({          "t"}, "<M-b>"      , "<C-\\><C-n>:vnew<cr>:terminal<cr>"         , NS)
 vim.keymap.set({     "i",    }, "<M-b>"      , "<Esc><cmd>vnew<cr><cmd>terminal<cr>"       , NS)
 vim.keymap.set({"n", "i"     }, "<C-l>"      , "<cmd>nohl<cr>"                             , NS)
-vim.keymap.set({"n", "i", "t"}, "<M-Space>"  , "<cmd>e! ~/wiki/main.md<cr>"                , NS)
+-- vim.keymap.set({"n", "i", "t"}, "<M-Space>"  , "<cmd>e! ~/wiki/main.md<cr>"                , NS)
 vim.keymap.set({"n", "i"     }, "<C-s>"      , "<cmd>ClangdSwitchSourceHeader<cr>"         , NS)
 vim.keymap.set({"n", "i"     }, "<leader>db" , "<cmd>DapToggleBreakpoint<cr>"              , NS)
 vim.keymap.set({"n", "i"     }, "<leader>dc" , "<cmd>DapContinue<cr>"                      , NS)
