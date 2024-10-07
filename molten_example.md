@@ -5,7 +5,7 @@
 
 # Markdown images
 
-![](../images/python-logo.png)
+![](python-logo.png)
 
 # Basic usage
 
@@ -70,7 +70,7 @@ Math(r'$S_N \equiv \frac{\pi^2}{6} - \sum_{k=1}^{N} \frac{1}{k^2}$')
 %matplotlib inline
 from PIL import Image
 
-image = Image.open('images/python-logo.png')
+image = Image.open('python-logo.png')
 image
 ```
 
